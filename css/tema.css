@@ -1,0 +1,38 @@
+:root {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent: #ffffff; 
+    --accent-hover: #e0e0e0;
+    --border-color: #333333;
+    
+    /* Cores de Status */
+    --success: #2ecc71; /* Verde */
+    --danger: #e74c3c;  /* Vermelho */
+    --warning: #f1c40f; /* Amarelo */
+    --info: #3498db;    /* Azul */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { background-color: var(--bg-body); color: var(--text-primary); }
+.hidden { display: none !important; }
+
+/* Botões Globais */
+.btn {
+    background-color: var(--accent); color: #000;
+    border: none; padding: 10px 20px; border-radius: 4px;
+    font-weight: bold; cursor: pointer; text-transform: uppercase;
+    transition: 0.3s;
+}
+.btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
+.btn.full { width: 100%; }
+.btn.danger { background-color: var(--danger); color: white; }
+
+/* Inputs Globais */
+input, select {
+    width: 100%; padding: 12px; margin-bottom: 15px;
+    background: var(--bg-body); border: 1px solid var(--border-color);
+    color: white; border-radius: 4px;
+}

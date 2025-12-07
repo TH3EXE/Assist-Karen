@@ -1,0 +1,160 @@
+/* Container Principal das Páginas */
+.main-container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid var(--border-color); }
+
+/* Grids e Cards (Dashboard/Vitrine) */
+.grid-kpi { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+.grid-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; }
+
+.card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; }
+.kpi-title { font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 5px; }
+.kpi-value { font-size: 2rem; font-weight: bold; }
+
+/* Itens da Vitrine */
+.gallery-item { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; position: relative; transition: 0.3s; }
+.gallery-item:hover { transform: translateY(-5px); border-color: var(--accent); }
+.gallery-img { height: 220px; background: #333; background-size: cover; background-position: center; }
+.gallery-info { padding: 15px; }
+.promo-tag { position: absolute; top:10px; right:10px; background: var(--danger); color:white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight:bold; }
+
+/* Tabelas (Agenda) */
+.styled-table { width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden; }
+.styled-table th, .styled-table td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border-color); }
+.styled-table th { background: #000; color: var(--accent); font-size: 0.8rem; text-transform: uppercase; }
+.status-ok { color: var(--success); font-weight: bold; }
+.status-pending { color: orange; font-weight: bold; }
+
+/* Modais (Janelas Flutuantes) */
+.modal-overlay { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); z-index: 200; display: flex; justify-content: center; align-items: center; }
+.modal-box { background: var(--bg-card); padding: 30px; border-radius: 8px; width: 90%; max-width: 500px; border: 1px solid var(--border-color); }
+
+/* Tela de Login (Específico) */
+#login-box { width: 350px; margin: 100px auto; text-align: center; }
+/* ... (Mantenha o código anterior) ... */
+
+/* --- ESTILOS EXCLUSIVOS DO MAPA --- */
+#map-container {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.map-results-title {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+/* Card de Estúdio no Mapa */
+.studio-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.studio-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+.studio-img {
+    height: 150px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+}
+
+.studio-info { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.studio-name { font-weight: bold; font-size: 1.1rem; margin-bottom: 5px; color: var(--text-primary); }
+.studio-desc { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 10px; }
+.studio-rating { color: #f1c40f; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; }
+
+/* Loader */
+.loading-msg { text-align: center; padding: 20px; color: var(--text-secondary); }
+
+/* --- ABAS DO ADMIN (Novo) --- */
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.tab-btn:hover { color: var(--text-primary); }
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* --- STATUS BADGES (Cores Vivas) --- */
+.badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.st-pendente { background: rgba(241, 196, 15, 0.2); color: #f1c40f; border: 1px solid #f1c40f; }
+.st-concluido { background: rgba(46, 204, 113, 0.2); color: #2ecc71; border: 1px solid #2ecc71; }
+.st-cancelado { background: rgba(231, 76, 60, 0.2); color: #e74c3c; border: 1px solid #e74c3c; }
+.st-reagendado { background: rgba(52, 152, 219, 0.2); color: #3498db; border: 1px solid #3498db; }
+
+/* --- CONTROLE FINANCEIRO --- */
+.finance-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+.tipo-entrada { color: #2ecc71; } /* Verde */
+.tipo-saida { color: #e74c3c; }   /* Vermelho */
+
+.main-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+
+/* Cards & Grids */
+.grid-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; }
+.card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; }
+
+/* Vitrine Items */
+.gallery-item { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; position: relative; transition: 0.3s; }
+.gallery-item:hover { transform: translateY(-5px); border-color: var(--accent); }
+.gallery-img { height: 250px; background-size: cover; background-position: center; }
+.gallery-info { padding: 15px; }
+.promo-badge { position: absolute; top: 10px; right: 10px; background: var(--danger); color: white; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; }
+
+/* Admin Tabs */
+.admin-tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+.tab-btn { background: transparent; border: none; color: var(--text-secondary); padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; font-size: 1rem; }
+.tab-btn.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+
+/* Tabelas e Status */
+.styled-table { width: 100%; border-collapse: collapse; background: var(--bg-card); }
+.styled-table th, .styled-table td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color); }
+.styled-table th { background: #000; color: var(--accent); }
+
+.badge { padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+.st-pendente { color: var(--warning); border: 1px solid var(--warning); }
+.st-concluido { color: var(--success); border: 1px solid var(--success); }
+.st-cancelado { color: var(--danger); border: 1px solid var(--danger); }
+
+/* Modais */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 2000; }
+.modal-box { background: var(--bg-card); padding: 30px; border-radius: 8px; width: 90%; max-width: 500px; border: 1px solid var(--border-color); }

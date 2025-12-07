@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa - Karen System</title>
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        /* Ajuste visual para o status */
+        #status-bar {
+            background: rgba(76, 209, 55, 0.1);
+            border: 1px solid var(--success);
+            color: var(--success);
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none; /* Oculto por padrão */
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .error-bar {
+            background: rgba(231, 76, 60, 0.1) !important;
+            border-color: var(--danger) !important;
+            color: var(--danger) !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-top-container"></div>
+
+    <div class="main-container">
+        <div class="page-header">
+            <h1>Localização em Tempo Real</h1>
+            <button class="btn" onclick="initMapReal()">🔄 Atualizar Posição</button>
+        </div>
+
+        <div id="status-bar"></div>
+
+        <div id="map-container"></div>
+
+        <h3 class="map-results-title">Estúdios Encontrados na Sua Região</h3>
+        <div id="studios-grid" class="grid-gallery">
+            <div class="loading-msg">Aguardando permissão de localização...</div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/dados.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
