@@ -30,3 +30,4 @@ function logoutSistema() {
     localStorage.removeItem('usuarioLogado');
     window.location.href = '../index.html';
 }
+

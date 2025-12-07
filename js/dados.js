@@ -74,3 +74,4 @@ const agendaInicial = [
 const gastosInicial = [
     { id: 1, descricao: 'Materiais Descartáveis', valor: 150, data: '2025-10-01' }
 ];
+

@@ -213,3 +213,4 @@ function atualizarGrafico() {
 }
 
 function toggleModal(id) { document.getElementById(id).classList.toggle('hidden'); }
+
